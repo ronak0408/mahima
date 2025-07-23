@@ -1,0 +1,474 @@
+:root {
+    --kt-bg: #fff8ef;
+    --kt-gold: #f7d49c;
+    --kt-deepblue: #36397A;
+    --kt-saffron: #d59219;
+    --kt-accent: #b6781c;
+    --kt-hr: #e8d1b6;
+}
+
+.kt-bg {
+    /* Removed: overflow-x:hidden, overflow:hidden; ensures children visible! */
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    background: var(--kt-bg);
+    color: #343150;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.spiritual-heading {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--kt-deepblue);
+    font-weight: 700;
+    margin-bottom: .3em;
+}
+.spiritual-fancy-in { /* for captions */ }
+.kt-hr-motif {
+    border: none;
+    border-top: 2.5px dotted var(--kt-accent);
+    margin: 0.8em auto 1.5em auto;
+    max-width: 320px;
+    opacity: 0.44;
+}
+
+/* Mandala border */
+.kt-mandala {
+    width: 180px !important;
+    max-width: 33vw;
+    display: block;
+    margin: 0 auto;
+    opacity: .92;
+    pointer-events: none;
+}
+
+.spiritual-border {
+    border-top: 1.5px solid #ecd39b88;
+    border-bottom: 1.5px solid #ecd39b88;
+    background: linear-gradient(90deg, #fffae7 60%, #ffeccf 100%);
+    box-shadow: 0 1px 20px 3px #e4e1b314;
+}
+
+/* --- Hero Gallery Full-Width, Landscape --- */
+.kt-hero-section {
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 0;
+    background: var(--kt-bg);
+    text-align: center;
+    z-index: 1;
+}
+
+.kt-hero-outer {
+    width: 100vw;
+    max-width: 100vw;
+    height: 56vh; /* 50-60% screen height */
+    max-height: 72vw; /* landscape ratio; max about 1280px desktop; */
+    min-height: 220px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: #ede3cb;
+    /* REMOVED overflow: hidden (don't hide sections below) */
+}
+
+/* Only one hero image visible, always background landscape */
+.kt-hero-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    min-height: 220px;
+    min-width: 100vw;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.9s, transform 0.9s;
+    filter: brightness(0.97) saturate(1.08) grayscale(0.09);
+    background: #e4d3aa;
+}
+.kt-hero-img--fadein {
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1) translateY(0);
+    animation: kt-zoom-in 1s cubic-bezier(0.44, 0.17, 0.08, 1) 0s 1;
+    pointer-events: auto;
+}
+.kt-hero-img--fadeout {
+    opacity: 0;
+    z-index: 1;
+    transform: scale(1.008);
+    pointer-events: none;
+}
+@keyframes kt-zoom-in {
+    0% { transform: scale(1.05) translateY(2vw); opacity: 0.62;}
+    100% { transform: scale(1.00) translateY(0); opacity: 1;}
+}
+/* Navigation arrows and dots */
+.kt-hero-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2.2em;
+    color: #fffbe1;
+    background: rgba(53,36,8,0.33);
+    border: none; border-radius: 50%; width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 7; opacity: 0.66;
+    transform: translateY(-50%);
+}
+.kt-hero-arrow--left { left: 18px; }
+.kt-hero-arrow--right { right: 18px; }
+.kt-hero-arrow:hover { background: #ffebb5; color: var(--kt-saffron); opacity: 1;}
+.kt-hero-dots {
+    position: absolute;
+    left: 0; bottom: 16px; width: 100vw;
+    display: flex; justify-content: center; gap: 11px; z-index: 14;
+}
+.kt-hero-dot {
+    width: 13px; height: 13px;
+    border-radius: 99px;
+    background: #fae4a980;
+    border: 1.5px solid #f7e7b5;
+    cursor: pointer; outline: none;
+    transition: background 0.2s, transform 0.23s;
+    display: inline-block;
+}
+.kt-hero-dot.active, .kt-hero-dot:hover {
+    background: #ffe08e; outline: 0; transform: scale(1.18);
+}
+.kt-hero-caption {
+    width: 100vw;
+    text-align: center;
+    color: var(--kt-saffron);
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.15em;
+    font-weight: 500;
+    padding: 1.2em 0 1em 0;
+    background: transparent;
+    text-shadow: 0 1px 6px #ffebb38c, 0 0.6px 2px #fffbe144;
+    z-index: 2;
+    position: relative;
+}
+
+/* InfoBar (full-width, vertical stacking if mobile/tablet) */
+.kt-infobar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.6em 4vw 0.6em 4vw;
+    width: 100vw;
+    font-family: 'Lora', Georgia, serif;
+    background: linear-gradient(90deg, #fffbe7 40%, #fff6e0 100%);
+    border-bottom: 1.5px solid #ecd39b88;
+    z-index: 1;
+    position: relative;
+}
+.kt-infobar-section {
+    display: flex;
+    align-items: center;
+    gap: 11px; font-size: 1em; flex: 1;
+}
+.kt-infobar-icon { font-size: 1.5em; color: var(--kt-saffron);}
+.kt-infobar-title {
+    font-size: 1em; color: var(--kt-accent); opacity: 0.81;
+}
+.kt-infobar-value {
+    font-size: 1.11em; color: var(--kt-deepblue); font-weight: 600;
+}
+
+/* About Section (vertical flow) */
+.kt-about-section {
+    margin: 0 0 2em 0;
+    padding: 0; /* Remove side padding */
+    max-width: none; /* Allow section to take full available width in main column */
+}
+
+.kt-about-heading {
+    font-size: 2em;
+    color: var(--kt-deepblue);
+}
+.kt-about-content p {
+    font-size: 1.15em;
+    color: #634a1e;
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.8;
+    text-align: justify;
+}
+.kt-about-content b { color: var(--kt-accent);}
+.kt-about-content i {color: #57409a; font-style: italic;}
+
+/* Blogs List (vertical flow, full width) */
+.kt-blogs-section {
+    width: 100vw;
+    margin: 2em 0 3em 0;
+    padding: 0 8vw;
+    max-width: 1080px;
+}
+.kt-blogs-heading { font-size: 1.4em;}
+.kt-blog-list { list-style: none; padding: 0; }
+.kt-blog-listitem { margin-bottom: 2.3em; padding: 0.4em 0; }
+.kt-blog-title { font-family: 'Lora', Georgia, serif; font-weight: 600; color: var(--kt-deepblue);}
+.kt-blog-intro { color: #7e6030; font-size: 1em;}
+.kt-blog-read { color: var(--kt-saffron); font-size: 1em; text-decoration: underline dashed #e6bb7a; }
+.kt-blogs-divider {
+    margin: 1.2em 0;
+    border: none; border-top: 1.4px dashed #ffe6b3; opacity: 0.46; width: 85%;
+}
+
+/* Animations (fade-in on scroll) */
+.fade-on-scroll { /* NOT display:none - just invisible but occupies space */
+    opacity: 0;
+    transform: translateY(48px);
+    transition: opacity 0.9s cubic-bezier(.36,.49,.14,.95), transform 0.9s;
+    will-change: opacity, transform;
+}
+.fade-on-scroll.in-view { opacity: 1; transform: none; }
+
+/* Responsive section stacking */
+@media (max-width: 900px) {
+    .kt-hero-outer { height: 35vh; min-height: 130px; max-height: 260px; }
+    .kt-infobar { flex-direction: column; gap: 8px; }
+    .kt-about-section { padding: 0 4vw;}
+    .kt-blogs-section { padding: 0 4vw;}
+}
+@media (max-width: 600px) {
+    .kt-hero-section, .kt-hero-outer, .kt-hero-img { min-height: 120px; }
+    .kt-about-section, .kt-blogs-section { padding: 0 2vw; }
+}
+
+/* Prevent overflow hiding content! */
+.kt-hero-section, .kt-hero-outer, .kt-bg {
+    overflow: visible !important;
+}
+
+/* Main content container: two column layout */
+.kt-main-content-container {
+    display: flex;
+    gap: 2.5em; /* reasonable gap between main and sidebar */
+    /* ...rest unchanged */
+}
+
+.kt-main-left {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0;   /* Would fix extra space */
+    margin: 0;    /* Would fix extra space if present */
+}
+
+.kt-main-right {
+    flex: 0 0 320px;
+    background: none; /* Remove background from parent */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+.kt-sidebar-box {
+    width: 100%;
+    background: #fff8ec;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(213, 172, 53, 0.14);
+    padding: 1.7em 1.3em;
+    font-family: 'Lora', serif;
+    color: #473f16;
+    line-height: 1.5;
+    margin-top: 0;
+    /* Only background and styling for the content's own height */
+}
+
+.kt-sidebar-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.kt-sidebar-icon {
+    font-size: 1.75em;
+    margin-top: 0.15em;
+    color: #d6a509;
+    flex-shrink: 0;
+}
+.kt-sidebar-label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #7c6009;
+    font-size: 1.1em;
+}
+.kt-sidebar-value {
+    font-size: 0.975em;
+    letter-spacing: 0.01em;
+    color: #594b11;
+    line-height: 1.3;
+}
+
+/* InfoBar spacing fix: label & value with gap */
+.kt-infobar-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 130px;
+}
+.kt-infobar-text {
+    display: inline-flex;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--kt-deepblue);
+}
+.kt-infobar-title {
+    color: var(--kt-saffron);
+    margin-right: 4px;
+}
+
+/* Blog cards styling */
+.kt-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9em;
+}
+.kt-blog-card {
+    background: #fff3d5;
+    border-radius: 12px;
+    padding: 1.8em 2.4em;
+    text-decoration: none;
+    box-shadow: 0 3px 15px rgba(211,162,4,0.12);
+    color: #4c4030;
+    border: 1px solid #d7bd71;
+    transition: box-shadow 0.25s ease, background-color 0.25s ease;
+    font-family: 'Lora', serif;
+}
+.kt-blog-card:hover,
+.kt-blog-card:focus-visible {
+    box-shadow: 0 6px 18px rgba(255,191,28,0.26);
+    background-color: #fff8e2;
+}
+.kt-blog-title {
+    font-size: 1.4em;
+    margin-bottom: 0.42em;
+    font-weight: 700;
+    color: #503c0a;
+}
+.kt-blog-intro {
+    font-size: 1em;
+    margin-bottom: 0.66em;
+    color: #6e5d3c;
+    line-height: 1.5;
+}
+.kt-blog-read {
+    font-size: 1.05em;
+    color: #d49e05;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Responsive stacked layout on tablets/mobile */
+@media (max-width: 920px) {
+    .kt-main-content-container {
+        flex-direction: column;
+        padding: 0 5vw;
+        margin: 2em auto 3em auto;
+    }
+    .kt-main-right {
+        width: 100%;
+        max-width: none;
+        box-shadow: 0 3px 8px rgba(211, 162, 4, 0.15);
+        margin-top: 2.8em;
+        padding: 1.7em 1.7em;
+    }
+    .kt-main-left {
+        width: 100%;
+    }
+    .kt-infobar {
+        gap: 14px;
+    }
+    .kt-infobar-section {
+        min-width: auto;
+        font-size: 1em;
+    }
+}
+
+/* Minor spacing tidies for inner texts and headings */
+.kt-about-content p,
+.kt-infobar-value,
+.kt-sidebar-value {
+    word-break: break-word;
+}
+.kt-location-section {
+    background: #f9f4e6;
+    padding: 1.4em 2em;
+    border-radius: 11px;
+    margin: 2.2em 0 2.5em 0;
+    color: #3f3212;
+    box-shadow: 0 2px 10px 0 rgba(200, 160, 42, 0.06);
+}
+.kt-location-title {
+    font-size: 1.36em;
+    margin-bottom: 0.4em;
+    color: #aa850d;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+.kt-location-desc {
+    font-size: 1.07em;
+    line-height: 1.65;
+    margin: 0;
+}
+/* Common horizontal padding for major sections */
+.kt-hero-section,
+.kt-infobar,
+.kt-about-section,
+.kt-main-right, /* Sidebar container */
+.kt-location-section {
+    padding-left: 1rem;  /* ~16px */
+    padding-right: 1rem; /* ~16px */
+}
+
+/* To keep sidebar content spaced as well */
+.kt-sidebar-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* For the hero gallery inner wrapper to keep image edges flush, keep no horizontal padding */
+.kt-hero-outer {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* For InfoBar, override if it had wide horizontal padding */
+.kt-infobar {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+}
+
+/* About Section override */
+.kt-about-section {
+    /* If you had a larger padding before, reduce to consistent small padding */
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* Location Section */
+.kt-location-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* Sidebar container already inside .kt-main-right */
+/* Make sure .kt-main-right container also matches consistent padding */
+.kt-main-right {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+body, #root, .kt-bg {
+    overflow-x: hidden;
+}
