@@ -8,6 +8,8 @@ import Dhams from './Pages/DhamMahima';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import TermsOfUse from './Components/TermsOfUse';
 import PrivacyPolicy from './Components/PrivacyPolicy';
+import About from './Pages/About';
+import Famous from './Pages/Famous';
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
     {
       path: "dhams",
       element: <Dhams></Dhams>
+    },
+     {
+      path: "about",
+      element: <About></About>
+    },
+      {
+      path: "famous",
+      element: <Famous></Famous>
     },
     {
       path: "termsOfUse",
