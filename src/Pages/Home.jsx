@@ -9,6 +9,8 @@ import VashnoDevi from '../Components/VashnoDevi'
 import Footer from '../Components/Footer'
 import WelcomeSection from '../Components/WelcomSection'
 import ThreeDCar from '../Components/ThreeDCar'
+import KedarnathFAQ from "../Components/faq/SpiritualFAQ.jsx";
+import BlogSection from "../Components/Blog Section/BlogSection.jsx";
 
 function Home() {
   return (
@@ -22,6 +24,8 @@ function Home() {
     <Dwarka></Dwarka>
     <VashnoDevi></VashnoDevi>
     {/* <ThreeDCar></ThreeDCar> */}
+      <BlogSection/>
+      <KedarnathFAQ/>
     <Footer></Footer>
 
 
