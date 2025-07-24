@@ -50,13 +50,14 @@ const Navbar = () => {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6">
-              {["/", "/dhams", "/famous", "/about", "/contact"].map(
+              {["/", "/dhams", "/famous", "/about", "/blogs", "/contact"].map(
                 (path, index) => {
                   const labels = [
                     "Home",
                     "Dhams",
                     "Famous",
                     "About",
+                    "Blogs",
                     "Contact",
                   ];
                   return (
@@ -87,10 +88,11 @@ const Navbar = () => {
 
                 <button
                   onClick={() => navigate("/login")}
-                  className="hover:text-yellow-400 transition-colors duration-300"
+                  className="hover:text-yellow-400 transition-colors duration-300 bg-yellow-600 w-18 rounded-3xl font-semibold"
                   aria-label="Account"
                 >
-                  <User size={20} />
+                  {/* <User size={20} /> */}
+                  Login
                 </button>
               </div>
             </div>
@@ -145,6 +147,7 @@ const Navbar = () => {
             "/dhams",
             "/famous",
             "/about",
+            "/blogs",
             "/contact",
             "/search",
             "/login",
@@ -154,6 +157,7 @@ const Navbar = () => {
               "Dhams",
               "Famous",
               "About",
+                "Blogs",
               "Contact",
               "Search",
               "Login / Signup",
