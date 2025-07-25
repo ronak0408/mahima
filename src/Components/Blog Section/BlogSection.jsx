@@ -1,5 +1,6 @@
 import React from 'react';
 import './BlogSection.css';
+import Navbar from '../Navbar';
 
 const blogs = [
     {
@@ -53,6 +54,7 @@ const blogs = [
 
 const BlogPage = () => (
     <div className="spiritual-static-bg">
+        <Navbar></Navbar>
         <div className="blogs-section">
             <header className="header-section">
                 <span className="om-symbol">ॐ</span>
