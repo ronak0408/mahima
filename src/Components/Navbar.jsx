@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { Search, User, Mic } from "lucide-react";
 
 const Navbar = () => {
@@ -92,7 +92,7 @@ const Navbar = () => {
                   aria-label="Account"
                 >
                   {/* <User size={20} /> */}
-                  Login
+                  <Link to="/login">LogIn</Link>
                 </button>
               </div>
             </div>
