@@ -11,6 +11,8 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import About from './Pages/About';
 import Famous from './Pages/Famous';
 import BlogSection from './Components/Blog Section/BlogSection';
+import ConnectWithUs from './Components/Contact us/ContactUs';
+import Login from './Components/Login/Login';
 
 
 const router = createBrowserRouter([
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
      {
       path: "blogs",
       element: <BlogSection></BlogSection>
+    },
+     {
+      path: "contact",
+      element: <ConnectWithUs></ConnectWithUs>
+    },
+     {
+      path: "login",
+      element: <Login></Login>
     },
     {
       path: "termsOfUse",
