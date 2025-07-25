@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&family=Hind:wght@400;600&display=swap');
+
+/* Base page background */
+.faq-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: #f2f2f2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glass effect FAQ panel, no blur */
+.faq-glass {
+    width: 65vw;
+    max-width: 760px;
+    min-width: 300px;
+    background-color: rgba(255,255,255,0.20);
+    border: 1px solid rgba(255,255,255,0.30);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 2.2rem 2rem 2rem 2rem;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Responsive glass width for mobile */
+@media (max-width: 960px) {
+    .faq-glass { width: 94vw; padding: 1.3rem 0.9rem; }
+}
+@media (max-width: 600px) {
+    .faq-glass { min-width: 0; max-width: 100vw; }
+}
+
+/* Concentrated spiritual icon overlay (as watermark) */
+.faq-glass::before,
+.faq-glass::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Top-left icons watermark */
+.faq-glass::before {
+    content: 'ॐ    🕉️    🔱';
+    top: 22px;
+    left: 28px;
+    font-family: "Noto Sans Symbols", sans-serif;
+    font-size: 80px;
+    color: #bdbdbd;
+    opacity: 0.045;
+    letter-spacing: 1.7rem;
+    white-space: pre;
+    user-select: none;
+}
+
+/* Bottom-right icons watermark */
+.faq-glass::after {
+    content: '🔱    卐    ॐ';
+    bottom: 18px;
+    right: 32px;
+    font-family: "Noto Sans Symbols", sans-serif;
+    font-size: 80px;
+    color: #cfcfcf;
+    opacity: 0.045;
+    letter-spacing: 1.5rem;
+    white-space: pre;
+    user-select: none;
+}
+
+/* FAQ Title */
+.faq-title {
+    font-family: 'Poppins', 'Inter', 'Hind', sans-serif;
+    color: #2c3e50;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+/* FAQ List & Block Structure */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.faq-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FAQ Question (Accordion) */
+.faq-question {
+    all: unset;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', 'Poppins', 'Hind', sans-serif;
+    font-size: 1.11rem;
+    color: #333;
+    cursor: pointer;
+    padding: 1rem 0.5rem .9rem 0.2rem;
+    border-radius: 7px;
+    transition: background 0.18s, color 0.18s;
+    outline: none;
+}
+.faq-question:hover,
+.faq-question.open,
+.faq-question:focus {
+    background: rgba(44,62,80,0.07);
+    color: #2c3e50;
+}
+.faq-question-text {
+    flex: 1;
+    text-align: left;
+}
+.faq-icon {
+    margin-left: 0.9rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.5,0.2,0.2,1);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+            max-height 0.32s cubic-bezier(.57,.15,.33,1.19),
+            opacity 0.3s cubic-bezier(.57,.11,.23,1.12);
+    font-family: 'Inter', 'Poppins', 'Hind', sans-serif;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    text-align: left;
+    padding-left: 0.15rem;
+}
+.faq-answer.visible {
+    opacity: 1;
+    max-height: 120px;
+    margin-top: 0.3rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Soft FAQ Divider */
+.faq-divider {
+    width: 99%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(44,62,80,0.14) 2%, rgba(44,62,80,0.04) 100%);
+    border: none;
+    margin: 0.2rem 0 0 0.1rem;
+    border-radius: 1px;
+}
