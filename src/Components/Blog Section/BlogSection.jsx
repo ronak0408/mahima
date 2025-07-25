@@ -1,6 +1,7 @@
 import React from 'react';
 import './BlogSection.css';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 const blogs = [
     {
@@ -82,11 +83,9 @@ const BlogPage = () => (
             <div className="explore-blogs-section">
                 <a href="/blogs" className="explore-blogs-btn">Explore All Blogs 🪔</a>
             </div>
-            <footer className="footer-mantra">
-                <span className="mantra">सर्वे भवन्तु सुखिनः</span>
-                <span className="mantra-english">May all be happy and at peace</span>
-            </footer>
         </div>
+           <Footer></Footer>
+
     </div>
 );
 
