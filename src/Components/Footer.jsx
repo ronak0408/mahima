@@ -48,11 +48,11 @@ export default function Footer() {
           <ul className="space-y-2 font-semibold">
             <li><a href="#" className="hover:underline hover:text-yellow-400">Home</a></li>
             <li><a href="/dhams" className="hover:underline hover:text-yellow-400">Dhams</a></li>
-            <li><a href="#" className="hover:underline hover:text-yellow-400">Famous</a></li>
-            <li><a href="#" className="hover:underline hover:text-yellow-400">Pilgrimage Guides</a></li>
-            <li><a href="#" className="hover:underline hover:text-yellow-400">About</a></li>
+            <li><a href="/famous" className="hover:underline hover:text-yellow-400">Famous</a></li>
+            {/* <li><a href="#" className="hover:underline hover:text-yellow-400">Pilgrimage Guides</a></li> */}
+            <li><a href="/about" className="hover:underline hover:text-yellow-400">About</a></li>
             <li><a href="#" className="hover:underline hover:text-yellow-400">FAQs</a></li>
-            <li><a href="#" className="hover:underline hover:text-yellow-400">Dham Mahima Blogs</a></li>
+            <li><a href="/blogs" className="hover:underline hover:text-yellow-400">Dham Mahima Blogs</a></li>
           </ul>
         </div>
 
