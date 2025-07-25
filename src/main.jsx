@@ -10,6 +10,7 @@ import TermsOfUse from './Components/TermsOfUse';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import About from './Pages/About';
 import Famous from './Pages/Famous';
+import BlogSection from './Components/Blog Section/BlogSection';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
       path: "famous",
       element: <Famous></Famous>
+    },
+     {
+      path: "blogs",
+      element: <BlogSection></BlogSection>
     },
     {
       path: "termsOfUse",
