@@ -50,12 +50,14 @@ const Navbar = () => {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6">
-              {["/", "/dhams", "/famous", "/about", "/blogs", "/contact"].map(
+              {["/", "/dhams", "/famous", "/trekking", "/books", "/about", "/blogs", "/contact"].map(
                 (path, index) => {
                   const labels = [
                     "Home",
                     "Dhams",
                     "Famous",
+                    "Trekking",
+                    "Books",
                     "About",
                     "Blogs",
                     "Contact",
@@ -146,6 +148,8 @@ const Navbar = () => {
             "/",
             "/dhams",
             "/famous",
+            "/trekking",
+            "/books",
             "/about",
             "/blogs",
             "/contact",
@@ -156,6 +160,8 @@ const Navbar = () => {
               "Home",
               "Dhams",
               "Famous",
+              "Trekking",
+              "Books",
               "About",
                 "Blogs",
               "Contact",
