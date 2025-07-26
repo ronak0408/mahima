@@ -9,9 +9,9 @@ import VashnoDevi from '../Components/VashnoDevi'
 import Footer from '../Components/Footer'
 import WelcomeSection from '../Components/WelcomSection'
 import ThreeDCar from '../Components/ThreeDCar'
-import BlogSection from "./Components/Blog Section/BlogSection.jsx";
-import KedarnathFAQ from "./Components/faq/KedarnathFAQ.jsx";
-import OurServices from "./Components/ourServices/ourServices.jsx";
+import BlogSection from "../Components/Blog Section/BlogSection.jsx";
+import KedarnathFAQ from "../Components/faq/KedarnathFAQ.jsx";
+import OurServices from "../Components/ourServices/ourServices.jsx";
 
 function Home() {
   return (
@@ -29,6 +29,7 @@ function Home() {
       <BlogSection/>
      <KedarnathFAQ/>
     <Footer></Footer>
+  
 
 
     </>
