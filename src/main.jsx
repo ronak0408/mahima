@@ -13,6 +13,8 @@ import Famous from './Pages/Famous';
 import BlogSection from './Components/Blog Section/BlogSection';
 import ConnectWithUs from './Components/Contact us/ContactUs';
 import Login from './Components/Login/Login';
+import Trekking from './Pages/Trekking';
+import Books from './Pages/Books';
 
 
 const router = createBrowserRouter([
@@ -39,6 +41,15 @@ const router = createBrowserRouter([
       path: "blogs",
       element: <BlogSection></BlogSection>
     },
+     {
+      path: "trekking",
+      element: <Trekking></Trekking>
+    },
+    {
+      path: "books",
+      element: <Books></Books>
+    },
+
      {
       path: "contact",
       element: <ConnectWithUs></ConnectWithUs>
