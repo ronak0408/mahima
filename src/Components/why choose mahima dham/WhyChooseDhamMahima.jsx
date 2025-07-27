@@ -32,6 +32,14 @@ const cardData = [
         borderClass: "border-orange",
         icon: icon4,
     },
+    {
+        id: 5,
+        icon: icon1,  // Open book emoji (choose any matching your set)
+        title: 'Spiritual Books',
+        text: 'Whether you seek blessings or wish to plan a pilgrimage, DhamMahima is your trusted resource for authentic and inspiring content about India’s sacred geography.',
+        borderClass: "border-red",
+
+    }
 ];
 
 export default function WhyChooseDhamMahima() {
