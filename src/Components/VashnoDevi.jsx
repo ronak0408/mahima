@@ -41,7 +41,7 @@ function VashnoDevi() {
             <br /><br />
             Reaching the holy cave and witnessing the three sacred Pindis (manifestations of the Goddess) is a soul-touching moment. The cave radiates peace and spiritual power that words can't describe — you simply have to feel it.
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300">
+          <button className="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition duration-300">
             More
           </button>
         </div>
