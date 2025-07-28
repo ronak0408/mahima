@@ -93,7 +93,7 @@ export default function Attractions() {
 
   {/* 👇 Explore button appears on hover */}
   <div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-    <button className=" bg-red-500 text-white px-4 py-1 rounded-full shadow-lg transition mb-3">
+    <button className=" bg-yellow-500 text-white px-4 py-1 rounded-full shadow-lg transition mb-3">
       Explore
     </button>
   </div>
@@ -117,7 +117,7 @@ export default function Attractions() {
           </button>
         </div>
 
-        <button className="mt-8 bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full">
+        <button className="mt-8 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full">
           Discover more
         </button>
       </div>
