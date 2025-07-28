@@ -62,7 +62,7 @@ const HeroSection = () => {
         </p>
 
         {/* BUTTON */}
-        <button className="bg-red-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-red-700 transition duration-300">
+        <button className="bg-yellow-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-yellow-700 transition duration-300">
             <Link to="/dhams">Start Your Yatra</Link>
         </button>
       </div>
