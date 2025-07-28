@@ -44,7 +44,7 @@ function Dwarka() {
             Whether it’s witnessing the grand evening aarti, walking along Gomti Ghat, or simply feeling the divine breeze by the sea —
             Dwarka offers an experience that is deeply spiritual, historically rich, and eternally peaceful.
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300">
+          <button className="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition duration-300">
             More
           </button>
         </div>
