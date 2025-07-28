@@ -52,7 +52,7 @@ function Badrinath_Home() {
               stories from the Mahabharata and Vedic times. Whether you seek divine blessings, inner peace, or the beauty of untouched nature,
               Badrinath offers a truly magical and soul-stirring experience.
             </p>
-            <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+            <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
               More
             </button>
           </div>
