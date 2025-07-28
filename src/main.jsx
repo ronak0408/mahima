@@ -10,7 +10,6 @@ import TermsOfUse from './Components/TermsOfUse';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import About from './Pages/About';
 import Famous from './Pages/Famous';
-import BlogSection from './Components/Blog Section/BlogSection';
 import ConnectWithUs from './Components/Contact us/ContactUs';
 import Login from './Components/Login/Login';
 import Trekking from './Pages/Trekking';
@@ -20,6 +19,7 @@ import Samaveda from './Pages/Books_Pages/Samaveda';
 import { Outlet } from "react-router-dom";
 import Yajurveda from './Pages/Books_Pages/Yajurveda';
 import Atharvaveda from './Pages/Books_Pages/Atharvaveda';
+import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
 
 
 
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     },
      {
       path: "blogs",
-      element: <BlogSection></BlogSection>
+      element: <BlogPage/>
     },
      {
       path: "trekking",
