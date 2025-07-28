@@ -38,12 +38,12 @@ const Navbar = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-0"> {/* ✅ reduced padding here */}
           <div className="flex justify-between items-center h-16 text-white">
-            {/* Logo */}
+            {/* ✅ Logo - moved to corner with some padding */}
             <NavLink
               to="/"
-              className="text-2xl font-bold tracking-wide hover:text-yellow-400 transition"
+              className="text-2xl font-bold tracking-wide hover:text-yellow-400 transition  "
             >
               Dham Mahima
             </NavLink>
@@ -93,7 +93,6 @@ const Navbar = () => {
                   className="hover:text-yellow-400 transition-colors duration-300 bg-yellow-600 w-18 rounded-3xl font-semibold"
                   aria-label="Account"
                 >
-                  {/* <User size={20} /> */}
                   <Link to="/login">LogIn</Link>
                 </button>
               </div>
@@ -163,7 +162,7 @@ const Navbar = () => {
               "Trekking",
               "Books",
               "About",
-                "Blogs",
+              "Blogs",
               "Contact",
               "Search",
               "Login / Signup",
