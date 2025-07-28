@@ -15,7 +15,7 @@ import ConnectWithUs from './Components/Contact us/ContactUs';
 import Login from './Components/Login/Login';
 import Trekking from './Pages/Trekking';
 import Books from './Pages/Books';
-
+import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
 
 const router = createBrowserRouter([
  { path: "/",
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     },
      {
       path: "blogs",
-      element: <BlogSection></BlogSection>
+      element: <BlogPage/>
     },
      {
       path: "trekking",
