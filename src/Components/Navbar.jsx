@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
           isHovered || scrolled
             ? "bg-black bg-opacity-90 backdrop-blur shadow-md"
             : "bg-black"
@@ -38,7 +38,7 @@ const Navbar = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-0"> {/* ✅ reduced padding here */}
+        <div className="max-w-8xl mx-auto px-2 sm:px-4 lg:px-6"> {/* ✅ reduced padding here */}
           <div className="flex justify-between items-center h-16 text-white">
             {/* ✅ Logo - moved to corner with some padding */}
             <NavLink
