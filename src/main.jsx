@@ -20,6 +20,7 @@ import { Outlet } from "react-router-dom";
 import Yajurveda from './Pages/Books_Pages/Yajurveda';
 import Atharvaveda from './Pages/Books_Pages/Atharvaveda';
 import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
+import HimachalTreksPage from './Pages/Trekking_States/HimachalTreksPage';
 
 
 
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
       path: "trekking",
       element: <Trekking></Trekking>
     },
+      {
+  path: "himachal-pradesh",     // ✅ direct route
+  element: <HimachalTreksPage></HimachalTreksPage>
+
+},
     {
       path: "books",
       element: <Books></Books>,
