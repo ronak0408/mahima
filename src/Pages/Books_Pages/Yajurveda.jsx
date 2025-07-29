@@ -13,9 +13,9 @@ export default function Yajurveda() {
           {/* Book Cover */}
           <div className="flex justify-center items-center">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKFm9lSbDAUvFzD5yLo9kKM9i5Ekd8QappfQ&s"
+              src="https://gurukul99.com/wp-content/uploads/2021/06/yajurved-in-hindi.png"
               alt="Yajurveda Book"
-              className="rounded-xl shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md object-contain"
+              className="rounded-xl h-130 shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md object-cover"
             />
           </div>
 
@@ -27,8 +27,7 @@ export default function Yajurveda() {
             </p>
 
             <p className="text-gray-700 leading-relaxed text-justify text-sm sm:text-base">
-              The Yajurveda is primarily a compilation of ritual offering formulas that were said by a priest while an individual performed ritual actions such as those before the yajna fire. It contains the liturgy (mantras) needed to perform the sacrifices of the Vedic religion.
-              The text is divided into two major branches: the *Shukla (White)* and the *Krishna (Black)* Yajurveda, each with multiple recensions.
+             The Yajurveda is the third of the four Vedas and serves as a practical guide for performing Vedic rituals and sacrifices. Unlike the Rigveda, which focuses on hymns, or the Samaveda, which emphasizes chants, the Yajurveda is primarily in prose and provides precise instructions for conducting yajnas (sacrificial ceremonies). It is divided into two major branches: the Shukla (White) Yajurveda, which has a clear separation of verses and explanations, and the Krishna (Black) Yajurveda, where the verses and commentary are mixed. Rich in mantras and ritual procedures, the Yajurveda played a vital role in the duties of Vedic priests and continues to influence Hindu worship practices today.
             </p>
 
             {/* Book Meta */}
@@ -79,15 +78,107 @@ export default function Yajurveda() {
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-gray-800">Maharishi Yajnavalkya</h2>
             <p className="text-gray-700 mt-2 text-sm sm:text-base">
-              Maharishi Yajnavalkya was a revered Vedic sage and is traditionally credited with significant portions of the *Shukla Yajurveda*.
-              His profound insight into ritual practices and philosophical inquiries made him one of the greatest rishis of Vedic India.
+             Maharishi Vajasaneya, also known as Vajasaneyi or Yajnavalkya, was a revered sage in ancient India and is best known for his association with the Shukla Yajurveda (White Yajurveda), also called the Vajasaneyi Samhita—named after him. He was a profound philosopher, spiritual teacher, and a central figure in several Upanishads, especially the Brihadaranyaka Upanishad, where he is portrayed as a master of metaphysical knowledge and deep spiritual insight.
             </p>
             <p className="text-gray-700 mt-4 text-sm sm:text-base">
-              He is also featured prominently in the *Brihadaranyaka Upanishad* for his spiritual debates and teachings on the Self (Atman).
+             Yajnavalkya was known for his sharp intellect and fearless debates with other sages and scholars. His teachings emphasized the nature of the Self (Atman), the importance of inner realization, and detachment from material desires as the path to liberation (moksha). He also introduced significant ideas about ethics, dharma, and the imperishable nature of the soul, which became foundational concepts in later Hindu philosophy.
+             <br /><br />
+             Maharishi Yajnavalkya is remembered not only for his contributions to the Vedas but also for his visionary insights that shaped the core of Vedantic thought.
             </p>
           </div>
+          
         </div>
       </div>
+         {/* Rating & Reviews Section */}
+        <div className="max-w-6xl mx-auto mt-12 sm:mt-16 bg-white rounded-3xl shadow-md p-6 sm:p-8 md:p-12 space-y-8">
+          {/* Rating */}
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Overall Rating</h2>
+            <div className="flex items-center gap-2 text-yellow-500 text-lg sm:text-xl">
+              {[...Array(4)].map((_, i) => (
+                <span key={i}>★</span>
+              ))}
+              <span>☆</span>
+              <span className="text-gray-700 text-sm sm:text-base ml-2">(4.5 out of 5)</span>
+            </div>
+          </div>
+
+          {/* Reviews */}
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Reviews</h2>
+
+            <div className="border-b border-gray-200 pb-4 mb-4">
+              <p className="font-semibold text-gray-800">Ananya Sharma</p>
+              <div className="text-yellow-500 text-sm">★★★★☆</div>
+              <p className="text-gray-700 text-sm sm:text-base mt-1">
+                A beautiful and thoughtful translation of the Rigveda. Swami Tejomayananda's work is both spiritual and practical.
+              </p>
+            </div>
+
+            <div className="border-b border-gray-200 pb-4 mb-4">
+              <p className="font-semibold text-gray-800">Ravi Deshmukh</p>
+              <div className="text-yellow-500 text-sm">★★★★★</div>
+              <p className="text-gray-700 text-sm sm:text-base mt-1">
+                The book provides deep insights into ancient wisdom with clear commentary. Highly recommend for anyone interested in Vedic texts.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-800">Meena Iyer</p>
+              <div className="text-yellow-500 text-sm">★★★★☆</div>
+              <p className="text-gray-700 text-sm sm:text-base mt-1">
+                A bit dense in some places, but overall a powerful and enlightening read.
+              </p>
+            </div>
+          </div>
+
+          {/* Review Submission Form */}
+          <div className="mt-10 border-t pt-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Leave a Review</h2>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+                <select
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                >
+                  <option value="">Select rating</option>
+                  <option value="5">★★★★★ (5)</option>
+                  <option value="4">★★★★☆ (4)</option>
+                  <option value="3">★★★☆☆ (3)</option>
+                  <option value="2">★★☆☆☆ (2)</option>
+                  <option value="1">★☆☆☆☆ (1)</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Your Review</label>
+                <textarea
+                  rows="4"
+                  placeholder="Share your thoughts about the book..."
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-2 rounded-lg transition"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       <Footer />
     </>
   );
