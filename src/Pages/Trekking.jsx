@@ -58,7 +58,7 @@ export default function Trekking() {
   };
 
   return (
-    <main className="relative flex flex-col min-h-screen bg-[url('https://www.chardham-pilgrimage-tour.com/assets/images/top-tourist-places-enroute-kedarnath-dham.webp')] bg-cover bg-center bg-no-repeat">
+    <main className="relative flex flex-col min-h-screen bg-[url('https://pragyata.com/wp-content/uploads/2018/03/Somnath-Temple-Rising-Phoenix.jpg')] bg-cover bg-center bg-no-repeat">
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/65 z-0"></div>
 
