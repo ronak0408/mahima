@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+
+// Inside your map function
 
 export default function DhamGrid() {
   const jyotirlingas = [
@@ -46,7 +49,15 @@ export default function DhamGrid() {
           className={`${isOpen ? "block" : "hidden"} sm:block space-y-1 sm:space-y-2 text-white text-sm pl-4 mt-1 sm:mt-2`}
         >
           {items.map((item, idx) => (
-            <li key={idx} className="hover:text-amber-200 cursor-pointer">{item}</li>
+            // <li key={idx} className="hover:text-amber-200 cursor-pointer">{item}</li>
+              <li key={idx}>
+                <Link
+                    to={`/${item}`}
+                    className="hover:text-amber-200 cursor-pointer"
+                >
+                  {item}
+                </Link>
+              </li>
           ))}
         </ul>
       </div>
