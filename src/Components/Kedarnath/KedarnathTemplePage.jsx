@@ -83,6 +83,7 @@ import VerticalInfoCards from "./VerticalInfoCards.jsx";
 import AboutPostCards from "./AboutPostCards.jsx";
 import FinalInfoCard from "./FinalInfoCard.jsx";
 import "./KedarnathTemplePage.css";
+import Navbar from "../Navbar.jsx";
 
 /* ⬇️ You can place this <style> in your index.html or inside a Tailwind CSS global file */
 const AnimatedBackground = () => (
@@ -137,7 +138,10 @@ export default function KedarnathTemplePage() {
     }, []);
 
     return (
+
         <div className="relative kn-bg min-h-screen overflow-x-hidden">
+            <Navbar/>
+
             {/* 🌌 Modern animated aurora/water background ⬇️ */}
             <AnimatedBackground />
 
