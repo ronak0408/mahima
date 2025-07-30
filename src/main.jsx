@@ -21,6 +21,7 @@ import Yajurveda from './Pages/Books_Pages/Yajurveda';
 import Atharvaveda from './Pages/Books_Pages/Atharvaveda';
 import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
 import HimachalTreksPage from './Pages/Trekking_States/HimachalTreksPage';
+import KedarnathTemplePage from "./Components/Kedarnath/KedarnathTemplePage.jsx";
 
 
 
@@ -36,7 +37,15 @@ const router = createBrowserRouter([
   {
           path: "home",
           element: <Home></Home>
-      },
+      }
+
+      ,
+
+      {
+          path: "kedarnath",
+          element: <KedarnathTemplePage/>
+      }
+      ,
    
     {
       path: "dhams",
