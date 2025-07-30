@@ -73,7 +73,7 @@ export default function DhamGrid() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://akm-img-a-in.tosshub.com/indiatoday/images/story/202504/kedarnath-dham-file-photo-pti-020423702-16x9.jpg?VersionId=JWU4gZjId3CuwcAduHLPQO_X5F_klamK&size=690:388')",
+            "url('https://s7ap1.scene7.com/is/image/incredibleindia/2-mana-village-badrinath-uttarakhand-attr-hero?qlt=82&ts=1726646481060')",
         }}
       ></div>
 
