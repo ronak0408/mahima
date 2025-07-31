@@ -26,7 +26,7 @@ const OurServices = () => {
             icon: '🪔',
             title: 'Trip Planner',
             description:
-                "The name 'DhamMahima' combines 'Dham' (sacred site) and 'Mahima' (divine glory). It reflects our commitment to unveiling the spiritual power and miracles of holy places.",
+                "The name 'DhamMahima' combines 'Dham' (sacred site) and 'Mahima' (divine glory). It reflects our commitment to unveiling the spiritual power and miracles of holy places and devotional content to deepen your spiritual connection. ",
             color: 'divine',
             link: '/trip-planner',
         },
@@ -35,7 +35,7 @@ const OurServices = () => {
             icon: '🙏',
             title: 'Multimedia Hub',
             description:
-                "Whether you seek blessings or wish to plan a pilgrimage, DhamMahima is your trusted resource for authentic and inspiring content about India's sacred geography.",
+                "Whether you seek blessings or wish to plan a pilgrimage, DhamMahima is your trusted resource for authentic and inspiring content about India's sacred geography and devotional content to deepen your spiritual connection..",
             color: 'devotion',
             link: '/multimedia-hub',
         },
@@ -106,18 +106,20 @@ const OurServices = () => {
                             >
                                 <span className="text-2xl">{card.icon}</span>
                             </div>
-                            <h3 className="text-base text-orange-900 font-semibold mb-2 font-cinzel tracking-tight leading-tight">
+                            <h3 className="text-center text-base text-orange-900 font-semibold mb-2 font-cinzel tracking-tight leading-tight">
                                 {card.title}
                             </h3>
+
                             <p className="text-xs text-orange-900/80 leading-relaxed max-h-24 overflow-hidden">
                                 {card.description}
                             </p>
                             <a
                                 href={card.link}
-                                className="inline-block mt-4 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold shadow-md hover:from-orange-500 hover:to-orange-600"
+                                className="block w-fit text-center mt-5 mx-auto px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold shadow-md hover:from-orange-500 hover:to-orange-600"
                             >
                                 Discover More
                             </a>
+
                             <div className="text-xl mt-2 opacity-70 animate-gentleFloat">🪷</div>
                         </article>
                     ))}
