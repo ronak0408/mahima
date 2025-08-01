@@ -68,6 +68,7 @@ export default function DhamGrid() {
 
   return (
     <div className="relative min-h-screen">
+      
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -78,10 +79,13 @@ export default function DhamGrid() {
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/35"></div>
+      <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full p-4">
+        <h1 className="text-center text-2xl md:text-4xl font-semibold pt-20 pb-10 text-yellow-500 ">
+            Visit Most Famous Dhams
+          </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-white">
           <Section title="Jyotirlingas (12)" items={jyotirlingas} index={0} openIndex={openIndex} setOpenIndex={setOpenIndex} />
           <Section title="Shakti Peethas (Part 1)" items={shaktiPeethas1} index={1} openIndex={openIndex} setOpenIndex={setOpenIndex} />
