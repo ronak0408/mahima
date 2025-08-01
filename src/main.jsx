@@ -22,6 +22,7 @@ import Atharvaveda from './Pages/Books_Pages/Atharvaveda';
 import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
 import HimachalTreksPage from './Pages/Trekking_States/HimachalTreksPage';
 import KedarnathTemplePage from "./Components/Kedarnath/KedarnathTemplePage.jsx";
+import Calendar3 from "./Components/Calendar3.jsx"
 
 
 
@@ -115,6 +116,12 @@ const router = createBrowserRouter([
     {
       path: "privacyPolicy",
       element: <PrivacyPolicy></PrivacyPolicy>
+    }
+   ,
+
+    {
+      path: "festival-calendar",
+      element: <Calendar3></Calendar3>
     }
   ]
  }
