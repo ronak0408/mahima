@@ -12,6 +12,7 @@ import ThreeDCar from '../Components/ThreeDCar'
 import BlogSection from "../Components/Blog Section/BlogSection.jsx";
 import KedarnathFAQ from "../Components/faq/KedarnathFAQ.jsx";
 import OurServices from "../Components/ourServices/ourServices.jsx";
+import Calendar3 from "../Components/Calendar3.jsx"
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
     <Kedarnath_Home></Kedarnath_Home>
     <Dwarka></Dwarka>
     <VashnoDevi></VashnoDevi>
+          <Calendar3></Calendar3>
     {/* <ThreeDCar></ThreeDCar> */}
       <BlogSection/>
      <KedarnathFAQ/>
