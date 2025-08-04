@@ -23,6 +23,8 @@ import BlogPage from '/src/Components/blogPage/BlogPage.jsx';
 import HimachalTreksPage from './Pages/Trekking_States/HimachalTreksPage';
 import KedarnathTemplePage from "./Components/Kedarnath/KedarnathTemplePage.jsx";
 import Calendar3 from "./Components/Calendar3.jsx"
+import VaranasiPage from './Components/Varanasi/Varanasi.jsx';
+// import TemplesSection from './Components/Varanasi/TemplesSection.jsx';
 
 
 
@@ -59,6 +61,11 @@ const router = createBrowserRouter([
       {
       path: "famous",
       element: <Famous></Famous>
+    },
+
+     {
+      path: "varanasi",
+      element: <VaranasiPage></VaranasiPage>
     },
      {
       path: "blogs",
