@@ -26,7 +26,7 @@ function Home() {
     <Kedarnath_Home></Kedarnath_Home>
     <Dwarka></Dwarka>
     <VashnoDevi></VashnoDevi>
-          <Calendar3></Calendar3>
+          {/* <Calendar3></Calendar3> */}
     {/* <ThreeDCar></ThreeDCar> */}
       <BlogSection/>
      <KedarnathFAQ/>
