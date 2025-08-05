@@ -10,9 +10,13 @@ const HeroSection = () => {
                 <h1 className="goku-hero__heading">
                     Explore Divine Temples
                 </h1>
-                <Link to="/home" className="goku-hero__homelink">
+               <div className='flex gap-7'> <Link to="/home" className="goku-hero__homelink">
                     Home
                 </Link>
+                 <Link to="/BlogPost" className="goku-hero__homelink">
+                    Post Blog
+                </Link></div>
+
             </div>
         </header>
     );
