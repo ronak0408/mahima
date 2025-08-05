@@ -315,11 +315,16 @@ const years = [2025, 2026];
 const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
 const firstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
 
-// --- Festival & National Day Detail Modal Component ---
+// --- Festival & National Day Detail Modal Component (UPDATED with Tabs) ---
 const EventModal = ({ eventInfo, onClose }) => {
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
+
   if (!eventInfo || eventInfo.length === 0) {
     return null;
   }
+
+  const currentEvent = eventInfo[currentEventIndex];
+  const totalEvents = eventInfo.length;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -331,40 +336,62 @@ const EventModal = ({ eventInfo, onClose }) => {
         >
           &times;
         </button>
-        {eventInfo.map((info, index) => (
-          <div key={index} className="mb-6">
-            <h2 className={`text-3xl font-extrabold ${info.type === 'national' ? 'text-blue-700' : 'text-amber-700'} mb-4 border-b pb-2 ${info.type === 'national' ? 'border-blue-200' : 'border-amber-200'}`}>
-              {info.name}
-            </h2>
-            <div className="flex flex-col space-y-4 text-base">
-              {info.why && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1">Why We Celebrate? (क्यों मनाते हैं?)</h3>
-                  <p className="text-gray-700 leading-relaxed">{info.why}</p>
-                </div>
-              )}
-              {info.how && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1">How We Celebrate? (कैसे मनाते हैं?)</h3>
-                  <p className="text-gray-700 leading-relaxed">{info.how}</p>
-                </div>
-              )}
-              {info.who && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1">{info.type === 'national' ? 'Who is Remembered?' : 'Which God is Worshipped?'}</h3>
-                  <p className="text-gray-700 leading-relaxed">{info.who}</p>
-                </div>
-              )}
-            </div>
-            {index < eventInfo.length - 1 && (
-              <hr className="my-6 border-t border-gray-300" />
+
+        {/* Tab Navigation for Multiple Events */}
+        {totalEvents > 1 && (
+          <div className="mb-4 border-b border-gray-200">
+            <ul className="flex flex-wrap -mb-px text-sm font-medium text-center" role="tablist">
+              {eventInfo.map((event, index) => (
+                <li key={index} className="me-2" role="presentation">
+                  <button
+                    className={`inline-block p-4 border-b-2 rounded-t-lg ${
+                      index === currentEventIndex
+                        ? 'border-amber-500 text-amber-600 font-bold'
+                        : 'border-transparent text-gray-500 hover:text-gray-600 hover:border-gray-300'
+                    }`}
+                    onClick={() => setCurrentEventIndex(index)}
+                    aria-selected={index === currentEventIndex}
+                    role="tab"
+                  >
+                    {event.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Modal Content */}
+        <div className="mb-6">
+          <h2 className={`text-3xl font-extrabold ${currentEvent.type === 'national' ? 'text-blue-700' : 'text-amber-700'} mb-4 border-b pb-2 ${currentEvent.type === 'national' ? 'border-blue-200' : 'border-amber-200'}`}>
+            {currentEvent.name}
+          </h2>
+          <div className="flex flex-col space-y-4 text-base">
+            {currentEvent.why && (
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">Why We Celebrate? (क्यों मनाते हैं?)</h3>
+                <p className="text-gray-700 leading-relaxed">{currentEvent.why}</p>
+              </div>
+            )}
+            {currentEvent.how && (
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">How We Celebrate? (कैसे मनाते हैं?)</h3>
+                <p className="text-gray-700 leading-relaxed">{currentEvent.how}</p>
+              </div>
+            )}
+            {currentEvent.who && (
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">{currentEvent.type === 'national' ? 'Who is Remembered?' : 'Which God is Worshipped?'}</h3>
+                <p className="text-gray-700 leading-relaxed">{currentEvent.who}</p>
+              </div>
             )}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
 };
+
 
 // --- Main Calendar Component ---
 const Calendar = () => {
@@ -409,25 +436,20 @@ const Calendar = () => {
   };
 
   const handleDayClick = (dateString) => {
-    const festivalName = festivalsByState[selectedState]?.[dateString] || festivalsByState['All India']?.[dateString];
-    const nationalDayName = nationalDays[dateString];
-
     const events = [];
+    
+    const festivalName = festivalsByState[selectedState]?.[dateString] || festivalsByState['All India']?.[dateString];
     if (festivalName) {
       const info = eventDescriptions[festivalName];
       if (info) events.push({ name: festivalName, ...info });
     }
+
+    const nationalDayName = nationalDays[dateString];
     if (nationalDayName) {
-      // Handle the combined 'Gandhi Jayanti / Shastri Jayanti' case
-      if (nationalDayName.includes('/')) {
-        const [name1, name2] = nationalDayName.split(' / ').map(n => n.trim());
-        const info1 = eventDescriptions[name1 + ' / ' + name2];
-        if (info1) events.push({ name: nationalDayName, ...info1 });
-      } else {
-        const info = eventDescriptions[nationalDayName];
-        if (info) events.push({ name: nationalDayName, ...info });
-      }
+      const info = eventDescriptions[nationalDayName];
+      if (info) events.push({ name: nationalDayName, ...info });
     }
+    
 
     if (events.length > 0) {
       setModalEventInfo(events);
