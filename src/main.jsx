@@ -132,13 +132,14 @@ const router = createBrowserRouter([
       path: "festival-calendar",
       element: <Calendar3></Calendar3>
     }
+   ,
+   
    {
       path: "Trip_Planner",
       element: <Trip_Planner></Trip_Planner>
-    },
-
+    }
+   ,
    
-
     {
       path: "BlogPost",
       element: <BlogPost></BlogPost>
