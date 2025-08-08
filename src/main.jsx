@@ -25,6 +25,7 @@ import KedarnathTemplePage from "./Components/Kedarnath/KedarnathTemplePage.jsx"
 import Calendar3 from "./Components/Calendar3.jsx"
 import VaranasiPage from './Components/Varanasi/Varanasi.jsx';
 import BlogPost from "./Components/BlogPost.jsx"
+import Trip_Planner from "./Pages/Trip_Planner/Trip_Planner.jsx"
 // import TemplesSection from './Components/Varanasi/TemplesSection.jsx';
 
 
@@ -131,7 +132,12 @@ const router = createBrowserRouter([
       path: "festival-calendar",
       element: <Calendar3></Calendar3>
     }
-   ,
+   {
+      path: "Trip_Planner",
+      element: <Trip_Planner></Trip_Planner>
+    },
+
+   
 
     {
       path: "BlogPost",
