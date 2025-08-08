@@ -28,7 +28,7 @@ const OurServices = () => {
             description:
                 "The name 'DhamMahima' combines 'Dham' (sacred site) and 'Mahima' (divine glory). It reflects our commitment to unveiling the spiritual power and miracles of holy places and devotional content to deepen your spiritual connection. ",
             color: 'divine',
-            link: '/trip-planner',
+            link: '/Trip_Planner',
         },
         {
             id: 4,
